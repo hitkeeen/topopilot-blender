@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TopoPilot | Local mesh diagnosis</title>
+  <style>
+    :root { color-scheme: light; --ink: #17212b; --muted: #52616b; --line: #d9e0e5; --accent: #176b87; --paper: #f5f7f8; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 16px/1.6 system-ui, sans-serif; }
+    main { max-width: 1060px; margin: 0 auto; padding: 64px 24px 80px; }
+    .hero { max-width: 760px; }
+    h1 { margin: 0 0 12px; font-size: clamp(2.4rem, 7vw, 5.5rem); line-height: 1; letter-spacing: 0; }
+    h2 { margin: 52px 0 18px; font-size: 1.5rem; }
+    p { color: var(--muted); }
+    .hero p { max-width: 660px; font-size: 1.15rem; }
+    .dl-btn { display: inline-block; margin-top: 14px; padding: 11px 18px; border-radius: 6px; background: var(--accent); color: white; text-decoration: none; font-weight: 700; }
+    .dl-btn:hover, .dl-btn:focus { background: #0e4e63; }
+    .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 38px; }
+    .principles article, figure { border: 1px solid var(--line); background: white; border-radius: 6px; }
+    .principles article { padding: 20px; }
+    .principles h3 { margin: 0 0 7px; font-size: 1rem; }
+    .principles p { margin: 0; font-size: .95rem; }
+    .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    figure { margin: 0; overflow: hidden; }
+    .placeholder { display: grid; place-items: center; min-height: 180px; padding: 18px; background: #e7edf0; color: #47616d; text-align: center; font-weight: 700; }
+    figcaption { padding: 14px 16px; color: var(--muted); font-size: .92rem; }
+    footer { margin-top: 55px; border-top: 1px solid var(--line); padding-top: 18px; color: var(--muted); font-size: .9rem; }
+    @media (max-width: 720px) { .principles, .shots { grid-template-columns: 1fr; } main { padding-top: 38px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <h1>TopoPilot</h1>
+      <p>Local-first mesh diagnosis for AI-generated assets, with an optional AI layer and a Blender workflow that keeps checks visible and repeatable.</p>
+      <a class="dl-btn" href="DOWNLOAD_URL_HERE" rel="noopener">&#11015;&#65039; Download</a>
+    </header>
+
+    <section aria-labelledby="workflow-title">
+      <h2 id="workflow-title">A small, inspectable starting point</h2>
+      <div class="principles">
+        <article><h3>Diagnose before editing</h3><p>Check boundaries, non-manifold edges, degenerate faces, and basic density metrics without changing the mesh.</p></article>
+        <article><h3>Run locally</h3><p>The CLI and sample fixture work offline. External models and provider adapters are optional and explicit.</p></article>
+        <article><h3>Keep judgment in the loop</h3><p>A report supports artist and engine review. It does not promise ideal topology or replace visual validation.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="shots-title">
+      <h2 id="shots-title">Workflow preview</h2>
+      <div class="shots">
+        <figure><div class="placeholder" role="img" aria-label="Placeholder for CLI JSON report screenshot">Placeholder: CLI report</div><figcaption>CLI diagnosis with warning codes and mesh metrics.</figcaption></figure>
+        <figure><div class="placeholder" role="img" aria-label="Placeholder for Blender panel screenshot">Placeholder: Blender N-panel</div><figcaption>Blender panel for a safe diagnosis of the active mesh.</figcaption></figure>
+        <figure><div class="placeholder" role="img" aria-label="Placeholder for JSON handoff screenshot">Placeholder: JSON handoff</div><figcaption>Structured report for a later pipeline step.</figcaption></figure>
+      </div>
+    </section>
+
+    <footer>TopoPilot is a starter project. Complex meshes require manual review, and final UV, LOD, material, deformation, and engine checks remain application-specific.</footer>
+  </main>
+</body>
+</html>

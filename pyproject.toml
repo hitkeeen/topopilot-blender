@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "topopilot"
+version = "0.1.0"
+description = "Local-first mesh diagnosis tools and a Blender add-on skeleton"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "TopoPilot contributors" }]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+topopilot = "topopilot.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["topopilot*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
